@@ -9,7 +9,7 @@ import { InstantTrade } from 'src/features/instant-trades/instant-trade';
 import { Token } from 'src/core';
 import { TransactionReceipt } from 'web3-eth';
 import { Injector } from 'src/core/sdk/injector';
-import { Route } from '@lifi/sdk';
+import { Route } from 'rubic-lifi-sdk';
 import { TransactionConfig } from 'web3-core';
 import BigNumber from 'bignumber.js';
 import { PriceTokenAmount } from 'src/core/blockchain/tokens/price-token-amount';

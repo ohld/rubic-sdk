@@ -7,7 +7,7 @@ import {
     TRADE_TYPE,
     TradeType
 } from 'src/features';
-import { Route } from '@lifi/sdk';
+import { Route } from 'rubic-lifi-sdk';
 import { Injector } from 'src/core/sdk/injector';
 import { FailedToCheckForTransactionReceiptError } from 'src/common';
 import { lifiContractAddress } from 'src/features/cross-chain/providers/lifi-trade-provider/constants/lifi-contract-data';

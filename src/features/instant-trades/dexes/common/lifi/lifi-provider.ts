@@ -1,7 +1,7 @@
 import { GasFeeInfo, TradeType } from 'src/features';
 import { InstantTrade } from 'src/features/instant-trades/instant-trade';
 import { BlockchainsInfo, PriceToken, Web3Pure } from 'src/core';
-import LIFI, { Route, RouteOptions, RoutesRequest, Step } from '@lifi/sdk';
+import LIFI, { Route, RouteOptions, RoutesRequest, Step } from 'rubic-lifi-sdk';
 import { PriceTokenAmount } from 'src/core/blockchain/tokens/price-token-amount';
 import { combineOptions } from 'src/common/utils/options';
 import { lifiProviders } from 'src/features/instant-trades/dexes/common/lifi/constants/lifi-providers';
@@ -110,7 +110,7 @@ export class LifiProvider {
         route: Route
     ): Promise<GasFeeInfo | null> {
         try {
-            const gasData = await LifiTrade.getGasData(from, to, route);
+            const gasData = await LifiTrade.getGasData(from, to, route as unknown as Route);
             if (!gasData) {
                 return null;
             }

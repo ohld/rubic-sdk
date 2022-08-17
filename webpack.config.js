@@ -18,7 +18,7 @@ module.exports = function(env, argv) {
                             },
                         },
                     ], 
-                    exclude: ['/node_modules', '/lib'],
+                    exclude: _ => /node_modules/.test(_) && !/node_modules\/(@lifi)/.test(_)
                 }
             ]
         },
